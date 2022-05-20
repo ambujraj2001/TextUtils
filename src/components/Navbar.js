@@ -8,8 +8,13 @@ export default function Navbar(props) {
         className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            {props.title}
+          <a className="navbar-brand" >
+            <Link
+              to="/"
+              style={{ color: "inherit", textDecoration: "inherit" }}
+            >
+              {props.title}
+            </Link>
           </a>
           <button
             className="navbar-toggler"
@@ -36,7 +41,7 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-active" href="/About">
+                <a className="nav-link text-active">
                   <Link
                     to="/About"
                     style={{ color: "inherit", textDecoration: "inherit" }}
